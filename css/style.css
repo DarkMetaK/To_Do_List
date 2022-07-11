@@ -1,0 +1,109 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+html{
+    height: 100%;
+}
+body{
+    background-color: #127369;
+    min-height: 100%;
+    display: flex;
+}
+/*Lista atual*/
+.list{
+    background-color: white;
+    width: 50%;
+    margin: auto;
+}
+#header{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    background-color: #10403B;
+    color: white;
+    padding: 30px;
+}
+/*Conjunto tarefas*/
+#alltasks{
+    background-color: #BFBFBF;
+    display: flex;
+    flex-direction: column;
+}
+.task_structure{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+.task_structure div input{
+    transform: scale(1.5);
+    margin: 10px;
+}
+.task_structure div label{
+    font-size: 20px;
+    overflow: auto;
+}
+.task_structure input:checked + label{
+    text-decoration: line-through;
+}
+.task_structure i{
+    font-size: 20px;
+    margin: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.task_structure i:hover{
+    color: #127369;
+}
+/*Fim conjunto tarefas*/
+#content{
+    display: flex;
+    gap: 10px;
+    padding: 30px;
+}
+/*Input tarefas*/
+#task{
+    font-size: 20px;
+    width: 90%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #000;
+}
+#addtask{
+    cursor: pointer;
+    padding: 10px;
+    background-color: #10403B;
+    color: white;
+    transition: 0.2s;
+}
+#addtask:hover{
+    background-color: #BFBFBF;
+    color: #10403B;
+}
+/*Fim input tarefas*/
+
+@media screen and (max-width: 350px) {
+    .list{
+        width: 100%;
+    }
+    #header{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #content{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    #task{
+        width: 100%;
+        text-align: center;
+    }
+    #addtask{
+        width: 50%;
+    }
+}
+@media screen and (max-width: 650px) {
+    .list{
+        width: 100%;
+    }
+}
